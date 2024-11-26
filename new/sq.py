@@ -1,5 +1,6 @@
 import streamlit as st
 import sqlite3
+import subprocess
 
 # SQLite Database setup
 def create_connection():
@@ -93,6 +94,7 @@ def main():
             if user:
                 st.success(f"Welcome {user['name']}!")
                 st.text("You are now logged in.")
+                subprocess.run(["streamlit", "run", "C:\\Users\\sudar\\OneDrive\\Desktop\\new\\cnvrted.py"])
             else:
                 st.error("Invalid email or password.")
 
