@@ -93,8 +93,9 @@ def main():
             user = login_user(email, password)
             if user:
                 st.success(f"Welcome {user['name']}!")
-                st.text("You are now logged in.")
                 subprocess.run(["streamlit", "run", "new//cnvrted.py"])
+                st.text("You are now logged in.")
+                
             else:
                 st.error("Invalid email or password.")
 
